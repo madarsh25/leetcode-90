@@ -1,14 +1,17 @@
-var titleToNumber = function (columnTitle) {
-  let abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let temp = 0;
-  for (let i = 0; i < 26; i++) {
-    if (abc.charAt(i) === columnTitle) {
-      temp = i + 1;
-      break;
-    }
-  }
+//231- Power of two
 
-  // if()
-  console.log(temp);
+var isPowerOfTwo = function(n) {
+    let a
+    for(let i=0; i<=31; i++){
+        if(2**i === n){
+            a= true
+            break
+        }
+    }
+    if( a== true){
+        return true
+    }else{
+        return false
+    }
+    
 };
-titleToNumber("A");
