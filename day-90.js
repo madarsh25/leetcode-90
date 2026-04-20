@@ -1,0 +1,20 @@
+//2078. Two Furthest Houses With Different Colors
+
+var maxDistance = function(colors) {
+    let n = colors.length;
+    let maxDist = 0;
+
+    for (let i = n - 1; i >= 0; i--) {
+        if (colors[i] !== colors[0]) {
+            maxDist = Math.max(maxDist, i);
+        }
+    }
+
+    for (let i = 0; i < n; i++) {
+        if (colors[i] !== colors[n - 1]) {
+            maxDist = Math.max(maxDist, n - 1 - i);
+        }
+    }
+
+    return maxDist;
+};
